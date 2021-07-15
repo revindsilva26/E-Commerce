@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+  height: 10vh;
+  overflow: hidden;
+}
+
+.logo-container,
+.nav-links,
+.cart {
+  display: flex;
+}
+
+.logo-container {
+  flex: 1;
+}
+.dropdown ul {
+  position: absolute;
+  background: white;
+  margin-top: 10px;
+  width: 200px;
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  list-style: none;
+  z-index: 3;
+  border-radius: 5px;
+  font-size: 16px;
+  opacity: 0;
+
+  transform: translateY(-10px);
+  transition: all 0.4s ease;
+}
+.dropdown a {
+  color: #5f5f79;
+  text-decoration: none;
+}
+.dropdown button {
+  border: none;
+  background: white;
+  cursor: pointer;
+}
+.dropdown button:focus + ul {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(5px);
+}
+
+.logo {
+  position: absolute;
+  left: 10%;
+  font-size: 21px;
+  font-weight: 400;
+}
+
+nav {
+  flex: 2;
+}
+
+.nav-links {
+  justify-content: space-around;
+  list-style: none;
+}
+.nav-link {
+  color: #5f5f79;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.cart {
+  flex: 0.5;
+  justify-content: flex-end;
+}
+.cart img {
+  width: 36px;
+}
+
+.carousel-container {
+  margin: auto;
+  position: relative;
+}
+.carousel-slide {
+  display: flex;
+  width: 100%;
+}
+
+#prevBtn {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  left: 5%;
+  cursor: pointer;
+  opacity: 0.3;
+}
+#nextBtn {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  left: 95%;
+  cursor: pointer;
+  opacity: 0.3;
+}

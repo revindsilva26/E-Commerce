@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Zenith Store</title>
+    <meta name="description" content="This is the description" />
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="store.js" async></script>
+  </head>
+  <body>
+    <header>
+      <div class="logo-container">
+        <div class="dropdown">
+          <button><img src="/list-menu.png" alt="logo" /></button>
+          <ul>
+            <li><a href="/phones">Phones</a></li>
+            <li><a href="/laptops">Laptops</a></li>
+          </ul>
+        </div>
+        <h4 class="logo">Zenith</h4>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a class="nav-link" href="/">Home</a></li>
+          <li>
+            <a class="nav-link" href="#"><img src="/avatar.png" alt=""/></a>
+          </li>
+          <li>
+            <form action="/logout?_method=DELETE" method="POST">
+              <a class="nav-link" href="/">Sign-out</a>
+            </form>
+          </li>
+        </ul>
+      </nav>
+      <div class="cart">
+        <a href="#"> <img src="/icons8-shopping-cart-32.png" alt="cart"/></a>
+      </div>
+    </header>
+    <section class="container content-section">
+      <h2 class="section-header">Laptops</h2>
+      <div class="shop-items">
+        <div class="shop-item">
+          <span class="shop-item-title"><%= name1 %></span>
+          <img class="shop-item-image" src="/81JiWgGRqxL._SX425_.jpg" />
+          <div class="shop-item-details">
+            <span class="shop-item-price"><%= price1 %></span>
+            <button class="btn btn-primary shop-item-button" type="button">
+              ADD TO CART
+            </button>
+          </div>
+        </div>
+        <div class="shop-item">
+          <span class="shop-item-title"><%= name2 %></span>
+          <img class="shop-item-image" src="/81Qif7RJs4L._SX425_.jpg" />
+          <div class="shop-item-details">
+            <span class="shop-item-price"><%= price2 %></span>
+            <button class="btn btn-primary shop-item-button" type="button">
+              ADD TO CART
+            </button>
+          </div>
+        </div>
+        <div class="shop-item">
+          <span class="shop-item-title"><%= name3 %></span>
+          <img class="shop-item-image" src="/Dell-Inspiron-i5559-425x425.jpg" />
+          <div class="shop-item-details">
+            <span class="shop-item-price"><%= price3 %></span>
+            <button class="btn btn-primary shop-item-button" type="button">
+              ADD TO CART
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container content-section">
+      <h2 class="section-header">CART</h2>
+      <div class="cart-row">
+        <span class="cart-item cart-header cart-column">ITEM</span>
+        <span class="cart-price cart-header cart-column">PRICE</span>
+        <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+      </div>
+      <div class="cart-items"></div>
+      <div class="cart-total">
+        <strong class="cart-total-title">Total</strong>
+        <span class="cart-total-price">$0</span>
+      </div>
+      <button class="btn btn-primary btn-purchase" type="button">
+        PURCHASE
+      </button>
+    </section>
+  </body>
+</html>
